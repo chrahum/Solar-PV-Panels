@@ -1,4 +1,3 @@
-// Equipment Folder
 {
     "panels": [
         {
@@ -96,9 +95,8 @@
     ],
     "inverter": [
         {
-            //http://bit.ly/2dvEe1J
             "name": "Outback",
-            "product":[
+            "product": [
                 {
                     "model": "GSLC175-120/240",
                     "warranty": "5 years",
@@ -106,12 +104,10 @@
                     "vac": "120/240"
                 }
             ]
-            
         },
         {
-            //http://bit.ly/2eqaM3y
             "name": "Magnum Energy",
-            "product":[
+            "product": [
                 {
                     "model": "ME2012",
                     "watt": 2000,
@@ -123,7 +119,6 @@
             ]
         },
         {
-            //http://bit.ly/2e84CSg
             "name": "Schneider Electric",
             "productLine": [
                 {
