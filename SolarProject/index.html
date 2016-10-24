@@ -61,6 +61,7 @@
 
 				<div id="summary">
 					<h1>Summary</h1>
+					<li ng-repeat="panel in panels">{{panel.name}}</li>
 
 					<div id="textOfSummary">
 						<p>What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
@@ -157,29 +158,13 @@
         </p>
         
 		<div class="col-sm-8">
-                            <div class="radio radio-danger">
+                            <div class="radio radio-danger" ng-repeat="contractor in contractors">
                                 <input type="radio" name="contractor" id="c1" value="option1">
                                 <label for="contractor1">
-                                    Contractor one
+                                    {{contractor.firstName}} {{contractor.lastName}} , {{contractor.companyName}}
                                 </label>
                             </div>
-                            <div class="radio radio-danger">
-                                <input type="radio" name="contractor" id="c2" value="option2" checked>
-                                <label for="contractor2">
-                                    Contractor two
-                                </label>
-                            </div>
-								<div class="radio radio-danger">
-                                <input type="radio" name="contractor" id="c3" value="option3" >
-                                <label for="contractor3">
-                                    Contractor three
-                                </label>
-							</div>
-								<div class="radio radio-danger">
-                                <input type="radio" name="contractor" id="c4" value="option4">
-                                <label for="contractor4">
-                                    Contractor fourth 
-                                </label>
+                            
 							</div>
     
     </fieldset>
@@ -190,36 +175,13 @@
 				<p> Please select your equipment</p>
 
 
-				<div class="radio radio-danger">
+				<div class="radio radio-danger" ng-repeat="panel in panels">
                                 <input type="radio" name="equip" id="eq1" value="option1">
                                 <label for="equip1">
-                                    Equip 1
+                                    {{panel.name}}
                                 </label>
                 </div>
-				<div class="radio radio-danger">
-                                <input type="radio" name="equip" id="eq2" value="option2" checked>
-                                <label for="equip2">
-                                    Equip 2
-                                </label>
-                </div>
-				<div class="radio radio-danger">
-                                <input type="radio" name="equip" id="eq3" value="option3">
-                                <label for="equip3">
-                                    Equip 3
-                                </label>
-				</div>
-               <div class="radio radio-danger">
-                                <input type="radio" name="equip" id="eq4" value="option4">
-                                <label for="equip4">
-                                    Equip 4
-                                </label> 
-               </div>
-				<div class="radio radio-danger">
-                                <input type="radio" name="equip" id="eq5" value="option5">
-                                <label for="equip5">
-                                    Equip 5
-                                </label>
-				</div>
+				
 				</div> <!--End of container equipment-->
 
             
@@ -228,10 +190,12 @@
 				<fieldset>
         <legend>Engineering</legend>
         <img src="http://images.wisegeek.com/technical-electrical-engineer.jpg " alt="image profile " width="242 ">
-        <br>
-        <p> ggsghsggsshsghsghsgshgshsgshss  dsadsdsddsdadsadsadsd
-            ddsdsadasdsddssdsadsa sdsadsddsdsddsdsdsdsadsdsdsadsds</p> 
+       
+	   <p>
+		   {{engineer.firstName}} {{engineer.lastName}}, {{engineer.engineer}}
+		   </p>
     </fieldset> 
+	 
 			</div> <!--End of container engineer-->
 			
 			<div id="results ">
