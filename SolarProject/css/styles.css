@@ -1,9 +1,13 @@
 div {
-    border: solid 1px;
+    /*border: solid 1px;*/
     margin: 10px;
    
 }
 
 h1 {
     text-align: center;
+}
+
+input{
+    min-width: 750px;
 }
