@@ -20,133 +20,128 @@
 </head>
 
 <body>
-		<!--Div that contains all the Divs together-->
-<div class="container">
-			<!--Div that contains the logo-->
-			<div id="logo">
-				<img src="./images/solar-energy.png" alt="Logo" style="width: 100px">
-			</div>
-			<!--Navigation Bar-->
-			<div id="navBar">
-				<nav class="navbar navbar-light bg-faded">
-					<a class="navbar-brand" href="#">Navbar</a>
-					<ul class="nav navbar-nav">
-						<li class="nav-item active">
-							<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Link</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Link</a>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true"
-								aria-expanded="false">Dropdown</a>
-							<div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
-								<a class="dropdown-item" href="#">Action</a>
-								<a class="dropdown-item" href="#">Another action</a>
-								<a class="dropdown-item" href="#">Something else here</a>
-							</div>
-						</li>
-					</ul>
-					<form class="form-inline float-xs-right">
-						<input class="form-control" type="text" placeholder="Search">
-						<button class="btn btn-outline-success" type="submit">Search</button>
-					</form>
-				</nav>
-			</div>
+	<!--Div that contains all the Divs together-->
+	<div class="container">
+		<!--Div that contains the logo-->
+		<div id="logo">
+			<img src="./images/solar-energy.png" alt="Logo" style="width: 100px">
+		</div>
+		<!--Navigation Bar-->
+		<div id="navBar">
+			<nav class="navbar navbar-light bg-faded">
+				<a class="navbar-brand" href="#">Navbar</a>
+				<ul class="nav navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Link</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Link</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">Dropdown</a>
+						<div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
+							<a class="dropdown-item" href="#">Action</a>
+							<a class="dropdown-item" href="#">Another action</a>
+							<a class="dropdown-item" href="#">Something else here</a>
+						</div>
+					</li>
+				</ul>
+				<form class="form-inline float-xs-right">
+					<input class="form-control" type="text" placeholder="Search">
+					<button class="btn btn-outline-success" type="submit">Search</button>
+				</form>
+			</nav>
+		</div>
 
-			<div class="row col-lg-12" ng-controller="myController">
+		<div class="row col-lg-12" ng-controller="myController">
 
-				<div id="summary">
-					<h1>Summary</h1>
 
-					<div id="textOfSummary">
-						<p>What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-							the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
-							it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-							remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-							Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem
-							Ipsum.
-						</p>
-					</div>
+			<div id="summary">
+				<h1>Summary</h1>
+
+
+				<div id="textOfSummary">
+					<p>What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+						the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+						it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+						remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
+						Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem
+						Ipsum.
+					</p>
 				</div>
+			</div>
 
+
+			<div>
 				<div id="questionaire">
 					<h1>Questionnaire</h1>
-					<div class="container col-md-11">
-						<!--contains questionary-->
+					<h3>Clean, Safe, Renewable. Solar Power. Why Not?</h3>
+					<a href="#section2"><button class=".btn-lg">Ready to save</button></a>
+					<div class="container">
 						<div class="row">
-							<h1>Are you ready to save money and help the enviroment?</h1>
-							<a href="#section2"><button class=".btn-lg">Ready to save</button></a>
+							<div class="col-md-5">
+								<form>
+								<label for="bill">What is your monthly electric bill?</label>
+								<input type="number" class="form-control" placeholder="Add Monthly Bill" />
+							
 
-						</div>
-						<!--row1-->
+							
+								<label for="provider ">Who is your electric provider?</label>
+								<input type="text " class="form-control " placeholder="SC Edison or Pacific Gas and Electric">
+							
 
-						<div class="row" id="section2">
-
-							<div class="input-group">
-								<label for="bill">What is your montly electry bill?</label>
-								<input type="text" class="form-control" placeholder="Add quantity">
-							</div><br>
-
-							<div class="input-group">
+							
 								<label for="adress">Adress</label>
-								<input type="text" class="form-control" " placeholder="Address is important to determine is your house can get solar " >
-						</div><br>
+								<input type="text" class="form-control" placeholder="Determines eligbility of Solar Power" />
+						
+								<label for="provider ">Who is your electric provider?</label>
+								<input type="text" class="form-control " placeholder="SC Edison, Pacific Gas and Electric, Consumers Energy">
+								</form>
+
+							</div>
+						
+							<div>
+								<form class="col-md-5">
+								<label for="pool ">Do you own a pool?</label>
+								<p>
+								<label> Yes <input type="radio" name="choosePool" value="Yes" checked></label>
+								<label> No 	<input type="radio" name="choosePool" value="No"></label>
+								</p>
+								<p>
+								<label for="roof1 ">What kind of roof do you have?</label>
+								<input type="text " class="form-control " placeholder="Asphalt, Tiles, Metal, Wood, Slate Shingles">
+								</p>
+								<label for="roof2 ">How old is your roof</label>
+								<input type="number" class="form-control " placeholder="Panels have a warranty of 20+ years, untouched.">
+							
+									<label for="finance ">Would you need financing?</label>
+									<br>
+									<label> Yes <input type="radio" name="chooseFinancing" value="YesFinancing" checked></label>
+									<label> No 	<input type="radio" name="chooseFinancing" value="NoFinancing"></label>
+									</form>
+							</div>
+							
+						</div>
 					</div>
-					<!--row2-->
-					<div class="row ">
-						<div class="input-group ">
-							<label for="provider ">Who is your electric provider?</label>
-							<input type="text " class="form-control " placeholder="That will help us to calculate your savings " >
-						</div><br>
-
-						<div class="input-group ">
-							<label for="pool ">Do you own a pool?</label>
-							<input type="text " class="form-control " placeholder="That will help us to calculate your savings " >
-						</div><br>
-			</div>
-			<!--row3-->
-
-					<div class="row ">
-						<div class="input-group ">
-							<label for="roof1 ">What kind of roof do you have?</label>
-							<input type="text " class="form-control " placeholder="Just checking that your roof is strong enough " >
-						</div><br>
-
-						<div class="input-group ">
-							<label for="roof2 ">How old is your roof</label>
-							<input type="text " class="form-control " placeholder="Panels last 30 years, we have to make sure your roof last
-									that time "
-								aria-describedby="basic-addon1 ">
-						</div><br>
-					</div>
-					<!--row4-->
-
-					<div class="row ">
-						<div class="input-group ">
-							<label for="finance ">Would you need financing?</label>
-							<input type="text " class="form-control " placeholder="we have partners that can finance your project
-									" aria-describedby="basic-addon1 ">
-						</div><br>
-					</div>
-					<!--row5-->
-
-			</div><!--End of container questionary-->
 				</div>
-	
-		<div class="container "> <!--container-->
-			<div class="row col-md-8">
-				<h2> You need a equipment of XXXXX kw </h2>
 			</div>
-		</div> <!--End of container-->
-	
-				
-					
-	<div id="chooseContractor " class="container col-md-11 ">
-                <h1>Contractors</h1>
+
+			<div class="container ">
+				<!--container-->
+				<div class="row col-md-8">
+					<h2> You need a equipment of XXXXX kw </h2>
+				</div>
+			</div>
+			<!--End of container-->
+
+
+
+			<div id="chooseContractor " class="container col-md-11 ">
+				<h1>Contractors</h1>
 				</fieldset>
 
     <fieldset>
@@ -157,69 +152,31 @@
         </p>
         
 		<div class="col-sm-8">
-                            <div class="radio radio-danger">
+                            <div class="radio radio-danger" ng-repeat="contractor in contractors">
                                 <input type="radio" name="contractor" id="c1" value="option1">
                                 <label for="contractor1">
-                                    Contractor one
+                                    {{contractor.firstName}} {{contractor.lastName}} , {{contractor.companyName}}
                                 </label>
                             </div>
-                            <div class="radio radio-danger">
-                                <input type="radio" name="contractor" id="c2" value="option2" checked>
-                                <label for="contractor2">
-                                    Contractor two
-                                </label>
-                            </div>
-								<div class="radio radio-danger">
-                                <input type="radio" name="contractor" id="c3" value="option3" >
-                                <label for="contractor3">
-                                    Contractor three
-                                </label>
-							</div>
-								<div class="radio radio-danger">
-                                <input type="radio" name="contractor" id="c4" value="option4">
-                                <label for="contractor4">
-                                    Contractor fourth 
-                                </label>
+                            
 							</div>
     
     </fieldset>
             </div> <!--End of container contractors-->
 
-			<div id="chooseEquipment container ">
-                <h1>Equipment</h1>
-				<p> Please select your equipment</p>
+
+				<div id="chooseEquipment container ">
+					<h1>Equipment</h1>
+					<p> Please select your equipment</p>
 
 
-				<div class="radio radio-danger">
+				<div class="radio radio-danger" ng-repeat="panel in panels">
                                 <input type="radio" name="equip" id="eq1" value="option1">
                                 <label for="equip1">
-                                    Equip 1
+                                    {{panel.name}}
                                 </label>
                 </div>
-				<div class="radio radio-danger">
-                                <input type="radio" name="equip" id="eq2" value="option2" checked>
-                                <label for="equip2">
-                                    Equip 2
-                                </label>
-                </div>
-				<div class="radio radio-danger">
-                                <input type="radio" name="equip" id="eq3" value="option3">
-                                <label for="equip3">
-                                    Equip 3
-                                </label>
-				</div>
-               <div class="radio radio-danger">
-                                <input type="radio" name="equip" id="eq4" value="option4">
-                                <label for="equip4">
-                                    Equip 4
-                                </label> 
-               </div>
-				<div class="radio radio-danger">
-                                <input type="radio" name="equip" id="eq5" value="option5">
-                                <label for="equip5">
-                                    Equip 5
-                                </label>
-				</div>
+				
 				</div> <!--End of container equipment-->
 
             
@@ -228,22 +185,21 @@
 				<fieldset>
         <legend>Engineering</legend>
         <img src="http://images.wisegeek.com/technical-electrical-engineer.jpg " alt="image profile " width="242 ">
-        <br>
-        <p> ggsghsggsshsghsghsgshgshsgshss  dsadsdsddsdadsadsadsd
-            ddsdsadasdsddssdsadsa sdsadsddsdsddsdsdsdsadsdsdsadsds</p> 
+       
+	   <p>
+		   {{engineer.firstName}} {{engineer.lastName}}, {{engineer.engineer}}
+		   </p>
     </fieldset> 
+	 
 			</div> <!--End of container engineer-->
 			
 			<div id="results ">
-			</div>
-			
-                <h1>Results</h1>
-            
-		</div>
 
-	</div>
-	<script src="./module/myApp.js "></script>
-    <script src="./controller/myController.js "></script>
+			</div>
+
+		</div>
+		<script src="./module/myApp.js "></script>
+		<script src="./controller/myController.js "></script>
 </body>
 
 </html>
