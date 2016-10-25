@@ -66,15 +66,15 @@
     "companies": [
         {
             "name": "SCE",
-            "rate": 0.35
+            "rate": 0.27
         },
         {
             "name": "PGE",
-            "rate": 0.38
+            "rate": 0.29
         },
         {
             "name": "SDGE",
-            "rate": 0.27
+            "rate": 0.24
         }
     ]
 }
