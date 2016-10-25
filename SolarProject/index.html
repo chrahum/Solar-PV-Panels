@@ -85,12 +85,12 @@
 							<div class="col-md-5">
 								<form>
 								<label for="bill">What is your monthly electric bill?</label>
-								<input type="number" class="form-control" placeholder="Add Monthly Bill" ng-model="bill" />
-							{{bill}}
+								<input type="number" class="form-control" placeholder="Add Monthly Bill" ng-model="costumerBill" />
+							{{bill}} {{$scope.bill}}
 
 							
 								<label for="provider ">Who is your electric provider?</label>
-								<input type="text " class="form-control " placeholder="SC Edison or Pacific Gas and Electric" ng-model="company">
+								<input type="text " class="form-control " placeholder="SC Edison or Pacific Gas and Electric" ng-model="companyElectricity">
 							{{company}}
 
 							
@@ -118,8 +118,8 @@
 							
 									<label for="finance ">Would you need financing?</label>
 									<br>
-									<label> Yes <input type="radio" name="chooseFinancing" value="YesFinancing" checked ng-model="yesFinancing"></label>
-									<label> No 	<input type="radio" name="chooseFinancing" value="NoFinancing" ng-model="noFinancing"></label>
+									<label> Yes <input type="radio" name="chooseFinancing" value="YesFinancing" checked ng-model="yesFinance"></label>
+									<label> No 	<input type="radio" name="chooseFinancing" value="NoFinancing" ng-model="noFinance"></label>
 									
 									</form>
 										
@@ -128,7 +128,7 @@
 						</div>
 					</div>
 					<div class="row">
-						<a href="#section2"><button class=".btn-lg" ng-click="calculateSystem">Ready to save</button></a>
+						<a href="#section2"><button class=".btn-lg" ng-click="calculateSize()">Ready to save</button></a>
 					</div>
 				</div>
 			</div>
