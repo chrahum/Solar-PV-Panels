@@ -3,165 +3,78 @@
         {
             "brand": [
                 {
-                    "name": "SunPower",
+                    "name": "SolarWorld",
+                    "model": "280W",
                     "warranty": "25 years",
                     "rating": "4.73 stars",
-                    "size": [
-                        {
-                            "smallPrice": 100,
-                            "mediumPrice": 200,
-                            "largePrice": 300
-                        }
-                    ]
+                    "price": 250
                 },
                 {
-                    "name": "Sharp USA",
-                    "warranty": "30 years",
-                    "rating": "4.71 stars",
-                    "size": [
-                        {
-                            "smallPrice": 100,
-                            "mediumPrice": 200,
-                            "largePrice": 300
-                        }
-                    ]
-                },
-                {
-                    "name": "SolarWorld",
+                    "name": "Q Cells",
+                    "model": "250W",
                     "warranty": "25 years",
-                    "rating": "4.79 stars",
-                    "size": [
-                        {
-                            "smallPrice": 100,
-                            "mediumPrice": 200,
-                            "largePrice": 300
-                        }
-                    ]
+                    "rating": "3.75 stars",
+                    "price": 195
                 },
                 {
-                    "name": "Sanyo Electric",
+                    "name": "LG",
+                    "model": "295W",
                     "warranty": "25 years",
-                    "rating": "4.90 stars",
-                    "size": [
-                        {
-                            "smallPrice": 100,
-                            "mediumPrice": 200,
-                            "largePrice": 300
-                        }
-                    ]
+                    "rating": "4.50 stars",
+                    "price": 285
                 },
                 {
-                    "name": "Mage Solar USA",
+                    "name": "Canadian Solar",
+                    "model": "260W",
                     "warranty": "25 years",
-                    "rating": "3.43 stars",
-                    "size": [
-                        {
-                            "smallPrice": 100,
-                            "mediumPrice": 200,
-                            "largePrice": 300
-                        }
-                    ]
+                    "rating": "4.25 stars",
+                    "price": 230
                 }
             ]
         }
     ],
     "mountingBracket": [
         {
-            "name": "Mounting Systems",
+            "name": "Unirac",
             "warranty": "25 years",
-            "rating": "5 stars",
-            "material": "aluminum",
-            "size": [
-                {
-                    "smallPrice": 100,
-                    "mediumPrice": 200,
-                    "largePrice": 300
-                }
-            ]
+            "rating": "4.25 stars",
+            "price": 75
         },
         {
-            "name": "Tamarack",
-            "warranty": "10 years",
-            "rating": "3 stars",
-            "material": "aluminum",
-            "size": [
-                {
-                    "smallPrice": 100,
-                    "mediumPrice": 200,
-                    "largePrice": 300
-                }
-            ]
+            "name": "Ironridge",
+            "warranty": "25 years",
+            "rating": "4.55 stars",
+            "price": 85
         }
     ],
     "inverter": [
         {
-            "name": "Outback",
-            "product": [
-                {
-                    "model": "GSLC175-120/240",
-                    "warranty": "5 years",
-                    "price": 940,
-                    "vac": "120/240"
-                }
-            ]
+            "name": "SMA",
+            "model": "Sunny Boy 3000",
+            "watts": "3000",
+            "warranty": "12 years",
+            "price": 2500
         },
         {
-            "name": "Magnum Energy",
-            "product": [
-                {
-                    "model": "ME2012",
-                    "watt": 2000,
-                    "warranty": "3 years",
-                    "price": 940,
-                    "vdc": 24,
-                    "vac": "120"
-                }
-            ]
+            "name": "Enphase",
+            "model": "Microinverter- C250",
+            "watts": "250",
+            "warranty": "20 years",
+            "price": 300
+        }
+    ],
+    "companies": [
+        {
+            "name": "SCE",
+            "rate": 0.35
         },
         {
-            "name": "Schneider Electric",
-            "productLine": [
-                {
-                    "model": "RNW8652524",
-                    "price": 1246,
-                    "watts": 2500,
-                    "vdc": 24,
-                    "vac": "120/240",
-                    "warranty": "2 years"
-                },
-                {
-                    "model": "RNW865252461",
-                    "price": 1826,
-                    "watts": 2500,
-                    "vdc": 24,
-                    "vac": "230",
-                    "warranty": "2 years"
-                },
-                {
-                    "model": "RNW8654024",
-                    "price": 1495,
-                    "watts": 4000,
-                    "vdc": 24,
-                    "vac": "120/240",
-                    "warranty": "2 years"
-                },
-                {
-                    "model": "RNW865402461",
-                    "price": 2325,
-                    "watts": 4000,
-                    "vdc": 24,
-                    "vac": "230",
-                    "warranty": "2 years"
-                },
-                {
-                    "model": "RNW865404861",
-                    "price": 1869,
-                    "watts": 4000,
-                    "vdc": 48,
-                    "vac": "230",
-                    "warranty": "2 years"
-                }
-            ]
+            "name": "PGE",
+            "rate": 0.38
+        },
+        {
+            "name": "SDGE",
+            "rate": 0.27
         }
     ]
 }
