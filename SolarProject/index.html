@@ -60,8 +60,8 @@
 		<div class="row col-lg-12" ng-controller="myController">
 
 
-			<div id="summary">
-				<h1>Summary</h1>
+				<div id="summary">
+					<h1>Summary</h1>
 
 
 				<div id="textOfSummary">
@@ -80,26 +80,24 @@
 				<div id="questionaire">
 					<h1>Questionnaire</h1>
 					<h3>Clean, Safe, Renewable. Solar Power. Why Not?</h3>
-					<a href="#section2"><button class=".btn-lg">Ready to save</button></a>
 					<div class="container">
 						<div class="row">
 							<div class="col-md-5">
 								<form>
 								<label for="bill">What is your monthly electric bill?</label>
-								<input type="number" class="form-control" placeholder="Add Monthly Bill" />
-							
+								<input type="number" class="form-control" placeholder="Add Monthly Bill" ng-model="bill" />
+							{{bill}}
 
 							
 								<label for="provider ">Who is your electric provider?</label>
-								<input type="text " class="form-control " placeholder="SC Edison or Pacific Gas and Electric">
-							
+								<input type="text " class="form-control " placeholder="SC Edison or Pacific Gas and Electric" ng-model="company">
+							{{company}}
 
 							
-								<label for="adress">Adress</label>
-								<input type="text" class="form-control" placeholder="Determines eligbility of Solar Power" />
-						
-								<label for="provider ">Who is your electric provider?</label>
-								<input type="text" class="form-control " placeholder="SC Edison, Pacific Gas and Electric, Consumers Energy">
+								<label for="adress">Address</label>
+								<input type="text" class="form-control" placeholder="Determines eligbility of Solar Power" ng-model="address" />
+						{{address}}
+								
 								</form>
 
 							</div>
@@ -108,24 +106,29 @@
 								<form class="col-md-5">
 								<label for="pool ">Do you own a pool?</label>
 								<p>
-								<label> Yes <input type="radio" name="choosePool" value="Yes" checked></label>
-								<label> No 	<input type="radio" name="choosePool" value="No"></label>
+								<label> Yes <input type="radio" name="choosePool" value="Yes" checked ng-model="yesPool"></label> {{yesPool}}
+								<label> No 	<input type="radio" name="choosePool" value="No" ng-model="noPool"></label>{{noPool}}
 								</p>
 								<p>
 								<label for="roof1 ">What kind of roof do you have?</label>
-								<input type="text " class="form-control " placeholder="Asphalt, Tiles, Metal, Wood, Slate Shingles">
+								<input type="text " class="form-control " placeholder="Asphalt, Tiles, Metal, Wood, Slate Shingles" ng-model="typeRoof">
 								</p>
 								<label for="roof2 ">How old is your roof</label>
-								<input type="number" class="form-control " placeholder="Panels have a warranty of 20+ years, untouched.">
+								<input type="number" class="form-control " placeholder="Panels have a warranty of 20+ years, untouched." ng-model="ageRoof">
 							
 									<label for="finance ">Would you need financing?</label>
 									<br>
-									<label> Yes <input type="radio" name="chooseFinancing" value="YesFinancing" checked></label>
-									<label> No 	<input type="radio" name="chooseFinancing" value="NoFinancing"></label>
+									<label> Yes <input type="radio" name="chooseFinancing" value="YesFinancing" checked ng-model="yesFinancing"></label>
+									<label> No 	<input type="radio" name="chooseFinancing" value="NoFinancing" ng-model="noFinancing"></label>
+									
 									</form>
+										
 							</div>
-							
+											
 						</div>
+					</div>
+					<div class="row">
+						<a href="#section2"><button class=".btn-lg" ng-click="calculateSystem">Ready to save</button></a>
 					</div>
 				</div>
 			</div>

@@ -1,3 +1,4 @@
+
 angular.module("myApp").controller("myController", function($scope, $http) {
 
         $http.get("http://localhost:8080/json/equipment.json")
@@ -30,6 +31,32 @@ $scope.selectedPanel = function(panel) {
     $scope.currentPanel = panel; 
 }
 
+
+companies = [];
+
+companies.company1 ={
+    name:"SCE",
+    rate: 0.35
+}
+
+companies.company2 ={
+    name:"PGE",
+    rate: 0.37
+}
+
+companies.company3 ={
+    name:"SDGE",
+    rate: 0.28
+}
+
+
+ $scope.calculateSystem = function(){
+
+// bill  has to be more than 150
+// some address qualify 
+// financing charges
+
+ }
 
 
 
