@@ -85,13 +85,13 @@
 							<div class="col-md-5">
 								<form>
 								<label for="bill">What is your monthly electric bill?</label>
-								<input type="number" class="form-control" placeholder="Add Monthly Bill" ng-model="costumerBill" />
-							{{bill}} {{$scope.bill}}
+								<input type="number" class="form-control" placeholder="Add Monthly Bill" ng-model="customerBill" />
+							{{bill}} {{$scope.customerBill}}
 
 							
 								<label for="provider ">Who is your electric provider?</label>
 								<input type="text " class="form-control " placeholder="SC Edison or Pacific Gas and Electric" ng-model="companyElectricity">
-							{{company}}
+							{{companyElectricity}}
 
 							
 								<label for="adress">Address</label>
@@ -136,37 +136,15 @@
 			<div class="container ">
 				<!--container-->
 				<div class="row col-md-8">
-					<h2> You need a equipment of XXXXX kw </h2>
+			
+					<h2> You need a equipment of {{size|limitTo:5}} kw  </h2>
 				</div>
 			</div>
 			<!--End of container-->
 
 
 
-			<div id="chooseContractor " class="container col-md-11 ">
-				<h1>Contractors</h1>
-				</fieldset>
-
-    <fieldset>
-        <legend>
-            Contractor </legend>
-        <p>
-            Please choose a contractor.
-        </p>
-        
-		<div class="col-sm-8">
-                            <div class="radio radio-danger" ng-repeat="contractor in contractors">
-                                <input type="radio" name="contractor" id="c1" value="option1">
-                                <label for="contractor1">
-                                    {{contractor.firstName}} {{contractor.lastName}} , {{contractor.companyName}}
-                                </label>
-                            </div>
-                            
-							</div>
-    
-    </fieldset>
-            </div> <!--End of container contractors-->
-
+			
 
 				<div id="chooseEquipment container ">
 					<h1>Equipment</h1>
@@ -182,23 +160,43 @@
 				
 				</div> <!--End of container equipment-->
 
-            
-			
-<div class="container ">
-				<fieldset>
-        <legend>Engineering</legend>
-        <img src="http://images.wisegeek.com/technical-electrical-engineer.jpg " alt="image profile " width="242 ">
-       
-	   <p>
-		   {{engineer.firstName}} {{engineer.lastName}}, {{engineer.engineer}}
-		   </p>
-    </fieldset> 
-	 
-			</div> <!--End of container engineer-->
-			
-			<div id="results ">
+		<div id="chooseContractor " class="container col-md-11 ">
+						<h1>Contractors</h1>
+						</fieldset>
 
-			</div>
+			
+				<p>
+					Please choose a contractor.
+				</p>
+				
+				<div class="col-sm-8">
+									<div class="radio radio-danger" ng-repeat="contractor in contractors">
+										<input type="radio" name="contractor" id="c1" value="option1">
+										<label for="contractor1">
+											{{contractor.firstName}} {{contractor.lastName}} , {{contractor.companyName}}
+										</label>
+									</div>
+									
+									</div>
+					</div> <!--End of container contractors-->
+
+					
+					
+		<div class="container  col-md-11">
+						<fieldset>
+				<legend>Engineering</legend>
+				<img src="http://images.wisegeek.com/technical-electrical-engineer.jpg " alt="image profile " width="242 ">
+			
+			<p>
+				{{engineer.firstName}} {{engineer.lastName}}, {{engineer.engineer}}
+				</p>
+			</fieldset> 
+			
+					</div> <!--End of container engineer-->
+					
+					<div id="results ">
+
+					</div>
 
 		</div>
 		<script src="./module/myApp.js "></script>

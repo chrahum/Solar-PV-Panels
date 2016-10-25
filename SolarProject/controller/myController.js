@@ -1,5 +1,22 @@
-
 angular.module("myApp").controller("myController", function($scope, $http) {
+
+$scope.size = ""; 
+
+
+    $scope.calculateSize = function () {
+        
+    
+        for (var i = 0; i < $scope.companies.length; i++) {
+            if ($scope.companyElectricity == $scope.companies[i].name) {
+               $scope.size=  ($scope.customerBill/$scope.companies[i].rate)/140;
+               
+            }
+        }
+
+    }
+
+
+
 
 //caling the json:
         $http.get("http://localhost:8080/json/equipment.json")
@@ -20,21 +37,21 @@ $http.get("http://localhost:8080/json/contractors.json")
 $http.get("http://localhost:8080/json/engineer.json")
 .then(function (response) {
                 $scope.engineer = response.data; 
-                console.log($scope.engineer);
+                console.log($scope.engineer); 
             }); 
 
 
 
 //ngmodel info from the input:
-$scope.customerBill ; 
-$scope.companyElectricity;
-$scope.address;
-$scope.yesPool;
-$scope.noPool;
-$scope.typeRoof;
-$scope.ageRoof;
-$scope.yesFinance;
-$scope.noFinance;
+$scope.customerBill; 
+$scope.companyElectricity; 
+$scope.address; 
+$scope.yesPool; 
+$scope.noPool; 
+$scope.typeRoof; 
+$scope.ageRoof; 
+$scope.yesFinance; 
+$scope.noFinance; 
 
 
 
@@ -49,25 +66,10 @@ $scope.selectedPanel = function(panel) {
 
 
 
-  $scope.calculateSize = function(){
-
-// bill  has to be more than 150
-// some address qualify 
-// financing charges
-var size;
-var cons
-
-for (var i =0; i<companies.length; i++){
-    if($scope.companyElectricity == $scope.companies[i].name ){
-        var cons = $scope.customerBill/$scope.companies[i].rate
-        var size = cons/140
-    } return size
-}
-
- }
+  
 
 
- $scope.calculateprice = function(){
+ $scope.calculateprice = function() {
 
 
 
