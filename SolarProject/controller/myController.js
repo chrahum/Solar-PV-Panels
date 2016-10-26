@@ -2,9 +2,8 @@ angular.module("myApp").controller("myController", function($scope, $http) {
 
 $scope.size = ""; 
 
-
+//function to  calculate size
     $scope.calculateSize = function () {
-        
     
         for (var i = 0; i < $scope.companies.length; i++) {
             if ($scope.companyElectricity == $scope.companies[i].name) {

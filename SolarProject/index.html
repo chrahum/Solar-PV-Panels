@@ -60,8 +60,8 @@
 		<div class="row col-lg-12" ng-controller="myController">
 
 
-				<div id="summary">
-					<h1>Summary</h1>
+			<div id="summary">
+				<h1>Summary</h1>
 
 
 				<div id="textOfSummary">
@@ -84,47 +84,44 @@
 						<div class="row">
 							<div class="col-md-5">
 								<form>
-								<label for="bill">What is your monthly electric bill?</label>
-								<input type="number" class="form-control" placeholder="Add Monthly Bill" ng-model="customerBill" />
-							{{bill}} {{$scope.customerBill}}
+									<label for="bill">What is your monthly electric bill?</label>
+									<input type="number" class="form-control" placeholder="Add Monthly Bill" ng-model="customerBill" /> {{bill}} {{$scope.customerBill}}
 
-							
-								<label for="provider ">Who is your electric provider?</label>
-								<input type="text " class="form-control " placeholder="SC Edison or Pacific Gas and Electric" ng-model="companyElectricity">
-							{{companyElectricity}}
 
-							
-								<label for="adress">Address</label>
-								<input type="text" class="form-control" placeholder="Determines eligbility of Solar Power" ng-model="address" />
-						{{address}}
-								
+									<label for="provider ">Who is your electric provider?</label>
+									<input type="text " class="form-control " placeholder="SC Edison or Pacific Gas and Electric" ng-model="companyElectricity">									{{companyElectricity}}
+
+
+									<label for="adress">Address</label>
+									<input type="text" class="form-control" placeholder="Determines eligbility of Solar Power" ng-model="address" />									{{address}}
+
 								</form>
 
 							</div>
-						
+
 							<div>
 								<form class="col-md-5">
-								<label for="pool ">Do you own a pool?</label>
-								<p>
-								<label> Yes <input type="radio" name="choosePool" value="Yes" checked ng-model="yesPool"></label> {{yesPool}}
-								<label> No 	<input type="radio" name="choosePool" value="No" ng-model="noPool"></label>{{noPool}}
-								</p>
-								<p>
-								<label for="roof1 ">What kind of roof do you have?</label>
-								<input type="text " class="form-control " placeholder="Asphalt, Tiles, Metal, Wood, Slate Shingles" ng-model="typeRoof">
-								</p>
-								<label for="roof2 ">How old is your roof</label>
-								<input type="number" class="form-control " placeholder="Panels have a warranty of 20+ years, untouched." ng-model="ageRoof">
-							
+									<label for="pool ">Do you own a pool?</label>
+									<p>
+										<label> Yes <input type="radio" name="choosePool" value="Yes" checked ng-model="yesPool"></label> {{yesPool}}
+										<label> No 	<input type="radio" name="choosePool" value="No" ng-model="noPool"></label>{{noPool}}
+									</p>
+									<p>
+										<label for="roof1 ">What kind of roof do you have?</label>
+										<input type="text " class="form-control " placeholder="Asphalt, Tiles, Metal, Wood, Slate Shingles" ng-model="typeRoof">
+									</p>
+									<label for="roof2 ">How old is your roof</label>
+									<input type="number" class="form-control " placeholder="Panels have a warranty of 20+ years, untouched." ng-model="ageRoof">
+
 									<label for="finance ">Would you need financing?</label>
 									<br>
 									<label> Yes <input type="radio" name="chooseFinancing" value="YesFinancing" checked ng-model="yesFinance"></label>
 									<label> No 	<input type="radio" name="chooseFinancing" value="NoFinancing" ng-model="noFinance"></label>
-									
-									</form>
-										
+
+								</form>
+
 							</div>
-											
+
 						</div>
 					</div>
 					<div class="row">
@@ -136,67 +133,93 @@
 			<div class="container ">
 				<!--container-->
 				<div class="row col-md-8">
-			
-					<h2> You need a equipment of {{size|limitTo:5}} kw  </h2>
+
+					<h2> You need a equipment of {{size|limitTo:5}} kw </h2>
 				</div>
 			</div>
 			<!--End of container-->
 
 
 
-			
-
-				<div id="chooseEquipment container ">
-					<h1>Equipment</h1>
-					<p> Please select your equipment</p>
 
 
-				<div class="radio radio-danger" ng-repeat="panel in panels">
-                                <input type="radio" name="equip" id="eq1" value="option1">
-                                <label for="equip1">
-                                    {{panel.name}}
+			<div id="chooseEquipment container ">
+				<h1>Equipment</h1>
+				<p> Please select your equipment</p>
+
+				<div class="row">
+					<div class="radio radio-danger col-md-7" ng-repeat="panel in panels">
+						<input type="radio" name="equip" id="eq1" value="option1">
+						<label for="equip1">
+                                    {{panel.name}} 
+									KW: {{panel.model}} , 
+									Rating: {{panel.rating}}
+									Price:  {{panel.price}}
                                 </label>
-                </div>
-				
-				</div> <!--End of container equipment-->
 
-		<div id="chooseContractor " class="container col-md-11 ">
-						<h1>Contractors</h1>
-						</fieldset>
-
-			
-				<p>
-					Please choose a contractor.
-				</p>
-				
-				<div class="col-sm-8">
-									<div class="radio radio-danger" ng-repeat="contractor in contractors">
-										<input type="radio" name="contractor" id="c1" value="option1">
-										<label for="contractor1">
-											{{contractor.firstName}} {{contractor.lastName}} , {{contractor.companyName}}
-										</label>
-									</div>
-									
-									</div>
-					</div> <!--End of container contractors-->
-
-					
-					
-		<div class="container  col-md-11">
-						<fieldset>
-				<legend>Engineering</legend>
-				<img src="http://images.wisegeek.com/technical-electrical-engineer.jpg " alt="image profile " width="242 ">
-			
-			<p>
-				{{engineer.firstName}} {{engineer.lastName}}, {{engineer.engineer}}
-				</p>
-			</fieldset> 
-			
-					</div> <!--End of container engineer-->
-					
-					<div id="results ">
 
 					</div>
+					<div class="col-md-5">
+
+						<fieldset>
+							<label for="choosen"> Your equipment is:</label>
+							<input type="text">
+						</fieldset>
+
+					</div>
+
+				</div>
+
+
+
+
+			</div>
+			<!--End of container equipment-->
+
+			<div id="chooseContractor " class="container col-md-12 ">
+				<h1>Contractors</h1>
+				<p> Please choose a contractor. </p>
+				<div class="row">
+					<div class="col-sm-7">
+					<div class="radio radio-danger" ng-repeat="contractor in contractors">
+						<input type="radio" name="contractor" id="c1" value="option1">
+						<label for="contractor1">
+											{{contractor.firstName}} {{contractor.lastName}} , {{contractor.companyName}}, Rating: {{contractor.averageCustomerRating[0].clientRating}}
+										</label>
+					</div>
+				</div>
+				<div class="col-md-5">
+
+					<fieldset>
+						<label for="choosen"> Your equipment is:</label>
+						<input type="text">
+					</fieldset>
+
+				</div>
+				</div>
+				
+			</div>
+			<!--End of container contractors-->
+
+
+
+			<div class="container  col-md-12">
+
+				<legend>Engineering</legend>
+				<img src="http://images.wisegeek.com/technical-electrical-engineer.jpg " alt="image profile " width="242 ">
+
+				<p>
+					{{engineer.firstName}} {{engineer.lastName}}, {{engineer.engineer}}
+				</p>
+
+
+			</div>
+			<!--End of container engineer-->
+
+			<div id="results " class="col-md-11">
+				<buton ng-class-clik="">Select One</buton>
+
+			</div>
 
 		</div>
 		<script src="./module/myApp.js "></script>
