@@ -87,10 +87,14 @@
 									<label for="bill">What is your monthly electric bill?</label>
 									<input type="number" class="form-control" placeholder="Add Monthly Bill" ng-model="customerBill" /> {{bill}} {{$scope.customerBill}}
 
-
 									<label for="provider ">Who is your electric provider?</label>
-									<input type="text " class="form-control " placeholder="SC Edison or Pacific Gas and Electric" ng-model="companyElectricity">									{{companyElectricity}}
-
+									<p>
+									<select class="selectpicker" ng-model="companyElectricity">
+  											<option value="SCE">Southern California Edison</option>
+ 										    <option value="PGE">Pacific Gas & Electric</option>
+  											<option value="SDGE">San Diego Class and Electric</option>
+									</select>
+									</p>
 
 									<label for="adress">Address</label>
 									<input type="text" class="form-control" placeholder="Determines eligbility of Solar Power" ng-model="address" />									{{address}}
@@ -143,27 +147,52 @@
 
 
 
-			<div id="chooseEquipment container ">
+			<div id="chooseEquipment container " class="container col-md-12">
 				<h1>Equipment</h1>
-				<p> Please select your equipment</p>
+
 
 				<div class="row">
-					<div class="radio radio-danger col-md-7" ng-repeat="panel in panels">
-						<input type="radio" name="equip" id="eq1" value="option1">
-						<label for="equip1">
-                                    {{panel.name}} 
+					<div class="col-md-7">
+						<h3> Choose A Panel </h3>
+						<div class="radio radio-danger" ng-repeat="panel in panels">
+							<input type="radio" name="equip" id="eq1" value="option1">
+							<label for="equip1">
+                                    {{ panel.name }} 
 									KW: {{panel.model}} , 
-									Rating: {{panel.rating}}
-									Price:  {{panel.price}}
+									Rating: {{ panel.rating }}
+									Price:  {{ panel.price }}
                                 </label>
 
 
+						</div>
+						<h3> Choose the Mounting Brackets </h3>
+						<div class="radio radio-danger" ng-repeat="mount in mounts">
+							<input type="radio" name="brackets" id="eq1" value="option2">
+							<label for="brackets">
+                                    {{ mount.name }} 
+								 	Rating: {{ mount.rating }}
+									Price:  {{ mount.price }}
+                                </label>
+						</div>
 					</div>
 					<div class="col-md-5">
 
+						<h3> Choose an Inverter </h3>
+						<div class="radio radio-danger" ng-repeat="inverter in inverters">
+							<input type="radio" name="inverters" id="eq1" value="option3">
+							<label for="inverters">
+                                    {{ inverter.name }}
+									Watts: {{ inverter.watts }} 
+								 	Rating: {{ inverter.rating }}
+									Price:  {{ inverter.price }}
+                                </label>
+						</div>
+
 						<fieldset>
-							<label for="choosen"> Your equipment is:</label>
-							<input type="text">
+							<legend>Equipment and Price </legend>
+							<label for="choosen"> You will need 
+								{{number}} panels and the price will be {{number}}</label>
+
 						</fieldset>
 
 					</div>
@@ -181,23 +210,23 @@
 				<p> Please choose a contractor. </p>
 				<div class="row">
 					<div class="col-sm-7">
-					<div class="radio radio-danger" ng-repeat="contractor in contractors">
-						<input type="radio" name="contractor" id="c1" value="option1">
-						<label for="contractor1">
+						<div class="radio radio-danger" ng-repeat="contractor in contractors">
+							<input type="radio" name="contractor" id="c1" value="option1">
+							<label for="contractor1">
 											{{contractor.firstName}} {{contractor.lastName}} , {{contractor.companyName}}, Rating: {{contractor.averageCustomerRating[0].clientRating}}
 										</label>
+						</div>
+					</div>
+					<div class="col-md-5">
+
+						<fieldset>
+							<label for="choosen"> Your equipment is:</label>
+							<input type="text">
+						</fieldset>
+
 					</div>
 				</div>
-				<div class="col-md-5">
 
-					<fieldset>
-						<label for="choosen"> Your equipment is:</label>
-						<input type="text">
-					</fieldset>
-
-				</div>
-				</div>
-				
 			</div>
 			<!--End of container contractors-->
 

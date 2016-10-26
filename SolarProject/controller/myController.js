@@ -7,7 +7,7 @@ $scope.size = "";
     
         for (var i = 0; i < $scope.companies.length; i++) {
             if ($scope.companyElectricity == $scope.companies[i].name) {
-               $scope.size=  ($scope.customerBill/$scope.companies[i].rate)/140;
+               $scope.size =  ($scope.customerBill/$scope.companies[i].rate)/140;
                
             }
         }
@@ -22,7 +22,7 @@ $scope.size = "";
 .then(function (response) {
                 $scope.panels = response.data.panels[0].brand; 
                 $scope.mounts = response.data.mountingBracket; 
-                $scope.inver = response.data.inverter; 
+                $scope.inverters = response.data.inverter; 
                 $scope.companies = response.data.companies
 
             }); 
