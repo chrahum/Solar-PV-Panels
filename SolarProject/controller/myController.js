@@ -56,21 +56,48 @@ $scope.noFinance;
 
 $scope.selectedPanel = ""; 
 
-$scope.selectedPanel = function(panel) {
-    $scope.currentPanel = panel; 
+$scope.clickPanel = function(panel) {
+    $scope.selectedPanel = panel; 
 }
 
 
+$scope.selectedInverter = ""; 
+
+$scope.clickInvert = function(panel) {
+    $scope.selectedInverter = inverter; 
+}
+
+$scope.selectedMount = ""; 
+
+$scope.clickMount = function(panel) {
+    $scope.selectedMount = mount; 
+}
 
 
+$scope.selectedContractor = ""; 
+
+$scope.clickContractor = function(panel) {
+    $scope.selectedContractor = contractor; 
+}
 
 
-  
-
+$scope.numberPanels="";
+$scope.panelPower = "";
+$scope.panelPrice ="";
+$scope.mountPrice ="";
+$scope.inverPrice = "";
+$scope.finalPrice = "";
 
  $scope.calculateprice = function() {
 
 
+$scope.panelPower = parseInt(panels[0].brand.model);
+$scope.numberPanels= $scope.size/$scope.panelPower;
+$scope.panelPrice= $scope.numberPanels*panels[0].price;
+$scope.mountPrice = $scope.mounts.price;
+$scope.inverPrice = $scope.inver.price;
+
+$scope.finalPrice = $scope.panelPrice + $scope.mountPrice+ $scope.inverPrice
 
  }
 
