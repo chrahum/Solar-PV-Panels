@@ -1,7 +1,5 @@
 {
     "panels": [
-        {
-            "brand": [
                 {
                     "name": "SolarWorld",
                     "model": "280W",
@@ -30,8 +28,6 @@
                     "rating": "4.25 stars",
                     "price": 230
                 }
-            ]
-        }
     ],
     "mountingBracket": [
         {

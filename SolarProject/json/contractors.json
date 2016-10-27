@@ -11,38 +11,13 @@
                 "state": "CA",
                 "postalCode": "93304"
             },
-            "contactInfo": [
-                {
-                    "type": "business",
+            "contactInfo": {
+                    "email": "justincase@solarmax.com",
                     "number": "661-867-5309"
                 },
-                {
-                    "type": "email",
-                    "number": "John@solarmax.com"
-                }
-            ],
-            "averagePrice": [
-                {
-                    "type": "less than 10kw install",
-                    "price": "$2.00/per w"
-                },
-                {
-                    "type": "greater than 10kw intall",
-                    "price": "1.75/per w"
-                }
-            ],
-            "averageCustomerRating": [
-                {
-                    "type": "rating",
-                    "clientRating": "5 stars"
-                }
-            ],
-            "warranty": [
-                {
-                    "type": "labor",
-                    "warranty": "10 years"
-                }
-            ]
+            "averagePrice": "3",
+            "averageCustomerRating": "5 stars",
+            "warranty": "10 years"
         },
         {
             "companyName": "Sun Power",
@@ -50,43 +25,18 @@
             "lastName": "Jones",
             "age": 36,
             "address": {
-                "streetAddress": "Main street",
+                "streetAddress": "111 Main street",
                 "city": "Huntington Beach",
                 "state": "CA",
                 "postalCode": "92648"
             },
-            "contactInfo": [
-                {
-                    "type": "business",
+            "contactInfo": {
+                    "email": "justincase@sunpower.com",
                     "number": "661-900-5081"
-                },
-                {
-                    "type": "email",
-                    "number": "robert@sunpower.com"
-                }
-            ],
-            "averagePrice": [
-                {
-                    "type": "less than 10kw install",
-                    "price": "$2.25/per w"
-                },
-                {
-                    "type": "greater than 10kw intall",
-                    "price": "1.95/per w"
-                }
-            ],
-            "averageCustomerRating": [
-                {
-                    "type": "rating",
-                    "clientRating": "4 stars"
-                }
-            ],
-            "warranty": [
-                {
-                    "type": "labor",
-                    "warranty": "10 years"
-                }
-            ]
+            },
+            "averagePrice": "2",
+            "averageCustomerRating": "4 stars",
+            "warranty": "10 years"
         },
         {
             "companyName": "Solar 360",
@@ -99,38 +49,13 @@
                 "state": "CA",
                 "postalCode": "92675"
             },
-            "contactInfo": [
-                {
-                    "type": "business",
+            "contactInfo": {
+                    "email": "justincase@solar360.com",
                     "number": "951-123-9876"
-                },
-                {
-                    "type": "email",
-                    "number": "justincase@solar360.com"
-                }
-            ],
-            "averagePrice": [
-                {
-                    "type": "less than 10kw install",
-                    "price": "$1.50/per w"
-                },
-                {
-                    "type": "greater than 10kw intall",
-                    "price": "1.30/per w"
-                }
-            ],
-            "averageCustomerRating": [
-                {
-                    "type": "rating",
-                    "clientRating": "3 stars"
-                }
-            ],
-            "warranty": [
-                {
-                    "type": "labor",
-                    "warranty": "10 years"
-                }
-            ]
+                },          
+            "averagePrice": "1.50",
+            "averageCustomerRating": "3 stars",
+            "warranty": "10 years"
         }
     ]
 }
