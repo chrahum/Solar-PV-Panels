@@ -1,5 +1,12 @@
 angular.module("myApp").controller("myController", function($scope, $http) {
 
+$scope.toggle = function() {
+        $scope.myVar = !$scope.myVar;
+    };
+
+
+
+
 $scope.size = ""; 
 
 //function to  calculate size
@@ -8,7 +15,7 @@ $scope.size = "";
         for (var i = 0; i < $scope.companies.length; i++) {
             if ($scope.companyElectricity == $scope.companies[i].name) {
                $scope.size =  ($scope.customerBill/$scope.companies[i].rate)/140;
-               
+               $scope.mySize = $scope.mySize;
             }
         }
 
@@ -20,7 +27,7 @@ $scope.size = "";
 //caling the json:
         $http.get("http://localhost:8080/json/equipment.json")
 .then(function (response) {
-                $scope.panels = response.data.panels[0].brand; 
+                $scope.panels = response.data.panels; 
                 $scope.mounts = response.data.mountingBracket; 
                 $scope.inverters = response.data.inverter; 
                 $scope.companies = response.data.companies
@@ -94,10 +101,6 @@ $scope.equipmentPrice = function(){
 // $scope.finalPrice = $scope.panelPrice + $scope.mountPrice+ $scope.inverPrice
 
 //  }
-
-
-
-
 
 
 
