@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" ng-app ="adminMyApp">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Admin Index</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+</head>
+
+<body ng-app="adminMyApp">
+	<div ng-controller="adminHeaderController">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+
+					<h2>Add Contractor</h2><br>
+
+
+					<fieldset>
+						<div class="input-group">
+							<label>Contractor Name</label>
+
+
+							<input type="text" class="form-contol" placeholder="Name" ng-model="contractorName" /><br><br>
+							<label>Company Name</label>
+							<input type="text" class="form-contol" placeholder="Name" ng-model="companyName" /><br><br>
+							<label>First Name</label>
+							<input type="text" class="form-contol" placeholder="Name" ng-model ="firstName"><br><br>
+							<label>Last Name</label>
+							<input type="text" class="form-contol" placeholder="Name" ng-model = "formControl"><br><br>
+							<label>Age</label>
+							<input type="number" class="form-contol" placeholder="Age" ng-model = "Age"><br><br>
+							<label>Address</label><br>
+							<input type="text" class="form-contol" placeholder="Street Address" ng-model = "streetAddress">
+							<input type="text" class="form-contol" placeholder="City" ng-model ="city"><br><br>
+							<input type="text" class="form-contol" placeholder="State">
+							<input type="text" class="form-contol" placeholder="Zip Code"ng-model = "zipCode"><br><br>
+							<label>Contact Info</label><br>
+							<input type="phone number" class="form-contol" placeholder="Phone Number"ng-model = "phoneNumber"><br><br>
+							<input type="email" class="form-contol" placeholder="Email"ng-model = "email"><br><br>
+							<label>Average Price</label><br>
+							<input type="number" class="form-contol" placeholder="Price Per Watt Under 10kw"ng-model = "pricePerWatt"><br><br>
+							<input type="number" class="form-contol" placeholder="Price Per Watt Over 10kw"><br><br>
+							<label>Rating</label>
+							<input type="number" class="form-contol" placeholder="1-5 Stars"ng-model = "starRating"><br><br>
+							<label>Warranty</label>
+							<input type="number" class="form-contol" placeholder="Labor Warranty in Years"ng-model = "laborWarranty">
+						</div>
+					</fieldset>
+
+				</div>
+				<div class="col-sm-6">
+					<h2>Add Equipment</h2>
+					<fieldset>
+						<div class="input-group">
+
+
+							<h3>Panels</h3>
+							<label>Panel Name</label>
+							<input type="text" class="form-contol" placeholder="Brand" ng-model = "brand"><br><br>
+							<label>Panel Model</label>
+							<input type="text" class="form-contol" placeholder="Model"ng-model = "panelModel"><br><br>
+							<label>Panel Output</label>
+							<input type="text" class="form-contol" placeholder="Output"ng-model = "output"><br><br>
+							<label>Warranty</label>
+							<input type="text" class="form-contol" placeholder="Warranty" ng-model = "panelWarranty"><br><br>
+							<label>Rating</label>
+							<input type="text" class="form-contol" placeholder="Rating"ng-model = "panelRating"><br><br>
+							<label>Price</label>
+							<input type="text" class="form-contol" placeholder="Price"ng-model = "panelPrice"><br><br>
+
+							<h3>Mounting Brackets</h3>
+							<label>Bracket Name</label>
+							<input type="text" class="form-contol" placeholder="Bracket Name"ng-model = "bracket"><br><br>
+							<label>Warranty</label>
+							<input type="text" class="form-contol" placeholder="Warranty"ng-model = "bracketWarranty"><br><br>
+							<label>Rating</label>
+							<input type="text" class="form-contol" placeholder="Rating"ng-model = "bracketRating"><br><br>
+							<label>Price</label>
+							<input type="text" class="form-contol" placeholder="Price"ng-model = "bracketPrice"><br><br>
+
+							<h3>Inverters</h3>
+							<label>Inverter Brand</label>
+							<input type="text" class="form-contol" placeholder="Inverter Brand"ng-model = "inverterBrand"><br><br>
+							<label>Inverter Model</label>
+							<input type="text" class="form-contol" placeholder="Inverter Model"ng-model = "inverterModel"><br><br>
+							<label>Watts</label>
+							<input type="text" class="form-contol" placeholder="Watts"ng-model = "inverterWatts"><br><br>
+							<label>Price</label>
+							<input type="text" class="form-contol" placeholder="Price"ng-model = "inverterPrice"><br><br>
+							<label>Warranty</label>
+							<input type="text" class="form-contol" placeholder="Warranty"ng-model = "inverterWarranty"><br><br>
+
+						</div>
+					</fieldset>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<script src="./adminMyApp.js "></script>
+	
+	<script src="./adminHeaderController.js "></script>
+
+
+
+
+</body>
+
+</html>
