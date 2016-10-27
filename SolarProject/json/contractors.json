@@ -12,10 +12,10 @@
                 "postalCode": "93304"
             },
             "contactInfo": {
-                    "email": "justincase@solarmax.com",
+                    "email": "johnsmith@solarmax.com",
                     "number": "661-867-5309"
                 },
-            "averagePrice": "3",
+            "averagePrice": "2.5",
             "averageCustomerRating": "5 stars",
             "warranty": "10 years"
         },
@@ -31,7 +31,7 @@
                 "postalCode": "92648"
             },
             "contactInfo": {
-                    "email": "justincase@sunpower.com",
+                    "email": "robertjones@sunpower.com",
                     "number": "661-900-5081"
             },
             "averagePrice": "2",

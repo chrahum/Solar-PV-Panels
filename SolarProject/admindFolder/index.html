@@ -47,13 +47,13 @@
 							<input type="email" class="form-contol" placeholder="Email" ng-model="emailInfo"><br><br>
 							<label>Average Price</label><br>
 							<input type="number" class="form-contol" placeholder="Price Per Watt Under 10kw" ng-model="pricePerWatt"><br><br>
-							
+
 							<label>Rating</label>
 							<input type="number" class="form-contol" placeholder="1-5 Stars" ng-model="starRating"><br><br>
 							<label>Warranty</label>
 							<input type="number" class="form-contol" placeholder="Labor Warranty in Years" ng-model="laborWarranty">
 							<button type="button" class="btn btn-primary pull-right" ng-click="pushContractors()">Add</button>
-							
+
 						</div>
 
 
@@ -77,12 +77,12 @@
 							<label>Price</label>
 							<input type="number" class="form-contol" placeholder="Price" ng-model="panelPrice"><br><br>
 							<button type="button" class="btn btn-primary pull-right" ng-click="pushPanels()">Add</button>
-						
+
 
 							<p>
 								<h3> Add Mounting Brackets</h3>
 								<label>Bracket Name</label>
-								<input type="text" class="form-contol" placeholder="Bracket Name" ng-model="bracketName"><br><br> 
+								<input type="text" class="form-contol" placeholder="Bracket Name" ng-model="bracketName"><br><br>
 								<label>Warranty</label>
 								<input type="text" class="form-contol" placeholder="Warranty" ng-model="bracketWarranty"><br><br>
 								<label>Rating</label>
@@ -91,13 +91,14 @@
 								<input type="text" class="form-contol" placeholder="Price" ng-model="bracketPrice"><br><br>
 
 								<button type="button" class="btn btn-primary pull-right" ng-click="pushMountingBracket()">Add</button>
-								
+
 							</p>
 
 							<p>
+
 								<h3>Inverters</h3>
 								<label>Inverter Brand</label>
-								<input type="text" class="form-contol" placeholder="Inverter Brand" ng-model="inverterBrand"><br><br>
+								<input type="text" class="form-contol" placeholder="Inverter Name" ng-model="inverterName"><br><br>
 								<label>Inverter Model</label>
 								<input type="text" class="form-contol" placeholder="Inverter Model" ng-model="inverterModel"><br><br>
 								<label>Watts</label>
@@ -106,6 +107,7 @@
 								<input type="text" class="form-contol" placeholder="Price" ng-model="inverterPrice"><br><br>
 								<label>Warranty</label>
 								<input type="text" class="form-contol" placeholder="Warranty" ng-model="inverterWarranty"><br><br>
+								<button type="button" class="btn btn-primary pull-right" ng-click="pushInverters()">Add</button>
 							</p>
 						</div>
 					</fieldset>
