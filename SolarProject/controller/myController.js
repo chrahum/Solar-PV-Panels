@@ -53,53 +53,47 @@ $scope.yesFinance;
 $scope.noFinance; 
 
 
+$scope.selectedPanel = $scope.panels;
+$scope.selectedBracket = $scope.mounts;
+$scope.selectedInverter = $scope.inverters;
 
-$scope.selectedPanel = ""; 
 
-$scope.clickPanel = function(panel) {
-    $scope.selectedPanel = panel; 
+$scope.equipmentPrice = function(){
+    $scope.panelPower = parseInt($scope.selectedPanel.model);
+    $scope.numberPanels = Math.ceil(($scope.size * 1000) / $scope.panelPower);
+    $scope.panelPrice = $scope.numberPanels * $scope.selectedPanel.price;
+    $scope.totalMountPrice = ($scope.numberPanels * $scope.selectedBracket.price);
+    $scope.inverterPrice = $scope.selectedInverter.price;
+    
+    var totalPrice = $scope.totalMountPrice + $scope.panelPrice + $scope.inverterPrice;
+    console.log($scope.numberPanels);
+    console.log($scope.panelPrice);
+    console.log($scope.totalMountPrice);
+    console.log($scope.inverterPrice);
+    console.log(totalPrice);
+
 }
 
 
-$scope.selectedInverter = ""; 
+// $scope.numberPanels="";
+// $scope.panelPower = "";
+// $scope.panelPrice ="";
+// $scope.mountPrice ="";
+// $scope.inverPrice = "";
+// $scope.finalPrice = "";
 
-$scope.clickInvert = function(panel) {
-    $scope.selectedInverter = inverter; 
-}
-
-$scope.selectedMount = ""; 
-
-$scope.clickMount = function(panel) {
-    $scope.selectedMount = mount; 
-}
+//  $scope.calculateprice = function() {
 
 
-$scope.selectedContractor = ""; 
-
-$scope.clickContractor = function(panel) {
-    $scope.selectedContractor = contractor; 
-}
 
 
-$scope.numberPanels="";
-$scope.panelPower = "";
-$scope.panelPrice ="";
-$scope.mountPrice ="";
-$scope.inverPrice = "";
-$scope.finalPrice = "";
 
- $scope.calculateprice = function() {
+// $scope.mountPrice = $scope.mounts.price;
+// $scope.inverPrice = $scope.inver.price;
 
+// $scope.finalPrice = $scope.panelPrice + $scope.mountPrice+ $scope.inverPrice
 
-$scope.panelPower = parseInt(panels[0].brand.model);
-$scope.numberPanels= $scope.size/$scope.panelPower;
-$scope.panelPrice= $scope.numberPanels*panels[0].price;
-$scope.mountPrice = $scope.mounts.price;
-$scope.inverPrice = $scope.inver.price;
-
-$scope.finalPrice = $scope.panelPrice + $scope.mountPrice+ $scope.inverPrice
-
- }
+//  }
 
 
 
