@@ -22,11 +22,26 @@
     padding-bottom: 20px;
 }
 
-h1 {
+h1, h2, h3 {
     text-align: center;
 }
-h2 {
-    text-align: center;
+
+#questionaireCSS {
+    width: 50%;
+    margin-left: 44px;
+}
+
+#questionaireCSS2 {
+    width: 35%;
+    margin-left: 44px;
+}
+
+#questionaireSubmit {
+    margin-right: 80px;
+}
+
+.equipmentCenter {
+    padding-bottom: 20px;
 }
 
 /*input{
@@ -39,4 +54,5 @@ h2 {
 
 #divBack {
     background-color:rgba(255, 255,255, 0.8);
+    margin-top: 55px;
 }
