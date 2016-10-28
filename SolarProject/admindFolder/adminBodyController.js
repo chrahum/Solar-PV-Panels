@@ -5,12 +5,14 @@ app.controller("adminBodyController", function ($scope, $http) {
 
             $scope.mounts = response.data.mountingBracket;
             $scope.panels = response.data.panels;
-            
+            $scope.inverters = response.data.inverter;
+
+
 
         })
 
-        $http.get("http://localhost:8080/json/contractors.json")
-        .then(function(response){
+    $http.get("http://localhost:8080/json/contractors.json")
+        .then(function (response) {
             $scope.contractors = response.data.contractor;
         })
 
@@ -24,7 +26,7 @@ app.controller("adminBodyController", function ($scope, $http) {
         $scope.mounts.push(newMount);
     }
 
-    $scope.pushContractors = function() {
+    $scope.pushContractors = function () {
         var newContractor = {
             companyName: $scope.companyName,
             firstName: $scope.firstName,
@@ -41,13 +43,13 @@ app.controller("adminBodyController", function ($scope, $http) {
                 number: $scope.phoneNumber
             },
             averagePrice: $scope.pricePerWatt,
-            averageCustomerRating: $scope.starRating + " stars" ,
+            averageCustomerRating: $scope.starRating + " stars",
             warranty: $scope.laborWarranty + " years"
         }
         $scope.contractors.push(newContractor);
     }
 
-    $scope.pushPanels = function() {
+    $scope.pushPanels = function () {
         var newPanel = {
             name: $scope.panelBrand,
             model: $scope.panelModel,
@@ -56,5 +58,17 @@ app.controller("adminBodyController", function ($scope, $http) {
             price: $scope.panelPrice
         }
         $scope.panels.push(newPanel)
+    }
+
+    $scope.pushInverters = function () {
+
+        var newInverter = {
+            name:   $scope.inverterName,
+            model: $scope.inverterModel,
+            watts: $scope.inverterWatts,
+            price: $scope.inverterPrice,
+            warranty: $scope.inverterWarranty
+        }
+        $scope.inverters.push(newInverter);
     }
 })
