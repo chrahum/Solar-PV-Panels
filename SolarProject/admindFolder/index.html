@@ -7,18 +7,15 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
 	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
 		crossorigin="anonymous">
 
 	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-	integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
 		crossorigin="anonymous">
 
 	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
-	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 		crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="../css/styles.css" />
 
@@ -83,7 +80,21 @@
 							</p>
 						</fieldset>
 					</div>
-
+					<div>
+						<h3>Delete Added Info</h3>
+						<div>
+							<label>New Contractor: </label>
+						</div>
+						<div>
+							<label>New Panel: </label>
+						</div>
+						<div>
+							<label>New Bracket: </label>
+						</div>
+						<div>
+							<label>New Inverter: </label>
+						</div>
+					</div>
 
 				</div>
 
@@ -148,30 +159,30 @@
 							</div>
 
 							<div>
-							<h3>Inverters</h3>
-							<p>
-								<label>Inverter Brand</label>
-								<input type="text" class="form-control" placeholder="Inverter Name" ng-model="inverterName">
-							</p>
-							<p>
-								<label>Inverter Model</label>
-								<input type="text" class="form-control" placeholder="Inverter Model" ng-model="inverterModel">
-							</p>
-							<p>
-								<label>Watts</label>
-								<input type="text" class="form-control" placeholder="Watts" ng-model="inverterWatts">
-							</p>
-							<p>
-								<label>Price</label>
-								<input type="text" class="form-control" placeholder="Price" ng-model="inverterPrice">
-							</p>
-							<p>
-								<label>Warranty</label>
-								<input type="text" class="form-control" placeholder="Warranty" ng-model="inverterWarranty">
-							</p>
-							<p>
-								<button type="button" class="btn btn-primary pull-right" ng-click="pushInverters()">Add</button>
-							</p>
+								<h3>Inverters</h3>
+								<p>
+									<label>Inverter Brand</label>
+									<input type="text" class="form-control" placeholder="Inverter Name" ng-model="inverterName">
+								</p>
+								<p>
+									<label>Inverter Model</label>
+									<input type="text" class="form-control" placeholder="Inverter Model" ng-model="inverterModel">
+								</p>
+								<p>
+									<label>Watts</label>
+									<input type="text" class="form-control" placeholder="Watts" ng-model="inverterWatts">
+								</p>
+								<p>
+									<label>Price</label>
+									<input type="text" class="form-control" placeholder="Price" ng-model="inverterPrice">
+								</p>
+								<p>
+									<label>Warranty</label>
+									<input type="text" class="form-control" placeholder="Warranty" ng-model="inverterWarranty">
+								</p>
+								<p>
+									<button type="button" class="btn btn-primary pull-right" ng-click="pushInverters()">Add</button>
+								</p>
 							</div>
 						</div>
 					</fieldset>
