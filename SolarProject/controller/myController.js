@@ -11,10 +11,27 @@ angular.module("myApp").controller("myController", function ($scope, $http) {
 
             }
         }
+        
 
     }
 
+$scope.questionaireHide = null;
+$scope.summaryHide = null;
+$scope.equipmentHide = null;
+$scope.contractorHide = null;
+$scope.engineerHide = null;
 
+$scope.moveToQuestionaire = function() {
+    $scope.questionaireHide = 1;
+    $scope.summaryHide = 1;
+    
+    console.log("this is working");
+}
+
+$scope.moveToEquipment = function(){
+        $scope.questionaireHide = null;
+        $scope.equipmentHide = 1;
+}
 
 
     //caling the json:
@@ -70,11 +87,10 @@ angular.module("myApp").controller("myController", function ($scope, $http) {
         $scope.inverterPrice = $scope.selectedInverter.price;
 
         $scope.totalPrice = $scope.totalMountPrice + $scope.panelPrice + $scope.inverterPrice;
-        console.log($scope.numberPanels);
-        console.log($scope.panelPrice);
-        console.log($scope.totalMountPrice);
-        console.log($scope.inverterPrice);
-        console.log($scope.totalPrice);
+        $scope.equipmentHide = null;
+        $scope.contractorHide = 1;
+
+
     }
 
     $scope.selectedContractor = $scope.contractors;
@@ -95,7 +111,9 @@ angular.module("myApp").controller("myController", function ($scope, $http) {
         $scope.paybackInYears = $scope.paybackInMonths / 12;
         $scope.remainderInYears = Math.ceil(($scope.paybackInYears % 1) * 12);
         $scope.paybackInYears = Math.floor($scope.paybackInMonths / 12);
-        console.log($scope.totalPriceOfContractor)
+        
+        $scope.contractorHide = null;
+        $scope.engineerHide = 1;
     }
 
 
