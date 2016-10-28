@@ -15,7 +15,7 @@
                     "email": "johnsmith@solarmax.com",
                     "number": "661-867-5309"
                 },
-            "averagePrice": "2.5",
+            "averagePrice": "200",
             "averageCustomerRating": "5 stars",
             "warranty": "10 years"
         },
@@ -34,7 +34,7 @@
                     "email": "robertjones@sunpower.com",
                     "number": "661-900-5081"
             },
-            "averagePrice": "2",
+            "averagePrice": "150",
             "averageCustomerRating": "4 stars",
             "warranty": "10 years"
         },
@@ -53,7 +53,7 @@
                     "email": "justincase@solar360.com",
                     "number": "951-123-9876"
                 },          
-            "averagePrice": "1.50",
+            "averagePrice": "100",
             "averageCustomerRating": "3 stars",
             "warranty": "10 years"
         }

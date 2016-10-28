@@ -17,7 +17,7 @@
     "services": [
         {
             "type": "plans",
-            "cost": 350
+            "cost": 400
         },
         {
             "type": "engineering calcs",

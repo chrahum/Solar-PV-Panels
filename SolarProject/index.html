@@ -85,7 +85,7 @@
 
 								<form>
 									<label for="bill">What is your monthly electric bill?</label>
-									<input type="number" class="form-control" placeholder="Add Monthly Bill" ng-model="customerBill" /> {{bill}} {{$scope.customerBill}}
+									<input type="number" class="form-control" placeholder="Add Monthly Bill" ng-model="customerBill" />{{$scope.customerBill}}
 
 									<label for="provider ">Who is your electric provider?</label>
 									<p>
@@ -97,8 +97,7 @@
 									</p>
 
 									<label for="adress">Address</label>
-									<input type="text" class="form-control" 
-									placeholder="Determines eligbility of Solar Power" ng-model="address" />									{{address}}
+									<input type="text" class="form-control" placeholder="Determines eligbility of Solar Power" ng-model="address" />									{{address}}
 
 								</form>
 
@@ -116,9 +115,9 @@
 										value="No" ng-model="noPool">
 										</label>
 									</p>
-									
-										<label for="roof1 ">What kind of roof do you have?</label>
-										<p>
+
+									<label for="roof1 ">What kind of roof do you have?</label>
+									<p>
 										<select class="selectpicker" ng-model="typeRoof">
   											<option value="asphalt">Asphalts</option>
  										    <option value="tiles">Tiles</option>
@@ -126,7 +125,7 @@
 											<option value="wood">Wood</option>
 											<option value="slate">Slate</option>
 										</select>
-										</p>
+									</p>
 
 									<label for="roof2 ">How old is your roof?</label>
 									<p>
@@ -140,8 +139,8 @@
 
 									<label for="finance">Would you need financing?</label>
 									<p>
-									<label> Yes <input type="radio" name="chooseFinancing" value="YesFinancing" checked ng-model="yesFinance"></label>
-									<label> No 	<input type="radio" name="chooseFinancing" value="NoFinancing" ng-model="noFinance"></label>
+										<label> Yes <input type="radio" name="chooseFinancing" value="YesFinancing" checked ng-model="yesFinance"></label>
+										<label> No 	<input type="radio" name="chooseFinancing" value="NoFinancing" ng-model="noFinance"></label>
 									</p>
 
 								</form>
@@ -176,9 +175,8 @@
 				<div class="row">
 					<div class="col-md-7">
 						<h3> Choose A Panel </h3>
-						<div class="radio radio-danger" ng-repeat="panel in panels" >
-							<input type="radio" name="equip" ng-model="$parent.selectedPanel" 
-							 ng-value="panel">
+						<div class="radio radio-danger" ng-repeat="panel in panels">
+							<input type="radio" name="equip" ng-model="$parent.selectedPanel" ng-value="panel">
 							<label>
                                     Name: {{ panel.name }} 
 									KW: {{panel.model}}
@@ -186,30 +184,28 @@
 									Price:  {{ panel.price }}
 									Waranty: {{ panel.warranty}}
                                 </label>
-										
+
 						</div>
-							{{selectedPanel}}
-								
+						
+
 						<h3> Choose the Mounting Brackets </h3>
 						<div class="radio radio-danger" ng-repeat="mount in mounts">
-							<input type="radio" name="brackets" ng-model="$parent.selectedBracket" 
-							 ng-value="mount">
+							<input type="radio" name="brackets" ng-model="$parent.selectedBracket" ng-value="mount">
 							<label>
                                     {{ mount.name }} 
 								 	Rating: {{ mount.rating }}
 									Price:  {{ mount.price }}
 									Warranty: {{ mount.warranty}}
                                 </label>
-								
+
 						</div>
-						{{selectedBracket}}
+						
 					</div>
 
 					<div class="col-md-5">
 						<h3> Choose an Inverter </h3>
 						<div class="radio radio-danger" ng-repeat="inverter in inverters">
-							<input type="radio" name="inverters" ng-model="$parent.selectedInverter" 
-							ng-value="inverter">
+							<input type="radio" name="inverters" ng-model="$parent.selectedInverter" ng-value="inverter">
 							<label for="inverter">
                                     {{ inverter.name }}
 									Watts: {{ inverter.watts }} 
@@ -217,13 +213,14 @@
 									Price:  {{ inverter.price }}
 									Waranty: {{ inverter.warranty}}
                                 </label>
-								
+
 						</div>
-							{{selectedInverter}}
+						
 						<fieldset>
 							<legend>Equipment and Price </legend>
+							<p>Your total Equipment price will be ${{ totalPrice }}</p>
 							<button type="button" class="btn btn-primary" ng-click="equipmentPrice()">Submit</button>
-									</fieldset>
+						</fieldset>
 
 					</div>
 
@@ -239,22 +236,29 @@
 				<h1>Contractors</h1>
 				<p> Please choose a contractor. </p>
 				<div class="row">
-					<div class="col-sm-7">
+					<div>
 						<div class="radio radio-danger" ng-repeat="contractor in contractors">
-							<input type="radio" name="contractor" id="c1" value="option1">
+							<input type="radio" name="contractor" ng-value="contractor"
+							ng-model="$parent.selectedContractor">
 							<label for="contractor1">
-											{{contractor.firstName}} {{contractor.lastName}} , {{contractor.companyName}}, Rating: {{contractor.averageCustomerRating[0].clientRating}}
-										</label>
+											{{ contractor.firstName }} {{
+												contractor.lastName }} , Company Name: {{
+													contractor.companyName }}, Rating: {{
+														contractor.averageCustomerRating }}, Price Per Watt : ${{
+															contractor.averagePrice }}
+							</label>
 						</div>
+						<button type="button" class="btn btn-primary pull-right" 
+						ng-click="totalCostOfContractor()">Submit</button>
 					</div>
-					<div class="col-md-5">
+					<!--<div class="col-md-5">
 
 						<fieldset>
 							<label for="choosen"> Your equipment is:</label>
 							<input type="text">
 						</fieldset>
 
-					</div>
+					</div>-->
 				</div>
 
 			</div>
@@ -268,18 +272,19 @@
 				<img src="http://images.wisegeek.com/technical-electrical-engineer.jpg " alt="image profile " width="242 ">
 
 				<p>
-					{{engineer.firstName}} {{engineer.lastName}}, {{engineer.engineer}}
+					Hi my name is {{engineer.firstName}} {{
+						engineer.lastName}}, and my company name is {{engineer.engineer}}.		
 				</p>
-
+				<p>Congratulations for taking the time to make our world a safe, clean environment with Solar Power.</p>
+				<p>Your whole system with installation will cost ${{ totalCostOfSystem }} and is eligible for a %30 tax credit. </p>
+				<p>Your total price after the tax credit will be ${{ totalWithTaxCredit }}</p>
+				<p>Your system will pay off in {{ paybackInYears }} years and {{ remainderInYears }} months.
+					{{ paybackInMonths }}
+				</p>
+				</div>
 
 			</div>
 			<!--End of container engineer-->
-
-			<div id="results " class="col-md-11">
-				<buton ng-class-clik="">Select One</buton>
-
-			</div>
-
 		</div>
 		<script src="./module/myApp.js "></script>
 		<script src="./controller/myController.js "></script>
