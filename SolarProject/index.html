@@ -217,7 +217,7 @@
 			<div id="chooseContractor" class="col-md-12 " ng-show="contractorHide != null">
 				<h1>Contractors</h1>
 				<h3> Please choose a contractor. </h3>
-				<div class="row center">
+				<div class="row center equipmentCenter">
 					<div>
 						<div class="radio radio-danger" ng-repeat="contractor in contractors">
 							<input type="radio" name="contractor" ng-value="contractor" ng-model="$parent.selectedContractor">
@@ -248,17 +248,18 @@
 
 			<div class="container  col-md-12" ng-show="engineerHide != null">
 
-				<legend>Engineering</legend>
-				<img src="http://images.wisegeek.com/technical-electrical-engineer.jpg " alt="image profile " width="242 ">
-
-				<p>
-					Hi my name is {{engineer.firstName}} {{ engineer.lastName}}, and my company name is {{engineer.engineer}}.
-				</p>
-				<p>Congratulations for taking the time to make our world a safe, clean environment with Solar Power.</p>
-				<p>Your whole system with installation will cost ${{ totalCostOfSystem }} and is eligible for a %30 tax credit. </p>
-				<p>Your total price after the tax credit will be ${{ totalWithTaxCredit }}</p>
-				<p>Your system will pay off in {{ paybackInYears }} years and {{ remainderInYears }} months. {{ paybackInMonths }}
-				</p>
+				<h1>Engineering</h1>
+				
+				<img src="http://images.wisegeek.com/technical-electrical-engineer.jpg " alt="image profile " width="242" class="imgCenter">
+				
+				<div class="center equipmentCenter">
+				<h4>Hi my name is {{engineer.firstName}} {{ engineer.lastName}}, and my company name is {{engineer.engineer}}.</h4>
+				<h4>Congratulations for taking the time to make our world a safe, clean environment with Solar Power.</h4>
+				<h4>Your whole system with installation will cost ${{ totalCostOfSystem }} and is eligible for a %30 tax credit. </h4>
+				<h4>Your total price after the tax credit will be ${{ totalWithTaxCredit }}</h4>
+				<h4>Your system will pay off in {{ paybackInYears }} years and {{ remainderInYears }} months.
+				</h4>
+				</div>
 				<div>
 					<button type="button" class="btn btn-primary pull-right" ng-click="backContractor()">Change Contractor</button>
 					<button type="button" class="btn btn-primary pull-right" ng-click="backEquip()">Change Equipment</button>
