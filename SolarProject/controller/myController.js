@@ -1,10 +1,23 @@
 angular.module("myApp").controller("myController", function($scope, $http) {
 
-$scope.toggle = function() {
+
+$scope.hide = function() {
         $scope.myVar = !$scope.myVar;
     };
 
+//  $scope.toggleMe = function(){
+//      $scope.toggle1 = !$scope.toggle1;
+//     }
+    
 
+// $(document).ready(function(){
+//     $("#hide1").click(function(){
+//         $("#questionaire").hide();
+//     });
+//     $("#show1").click(function(){
+//         $("#size").show();
+//     });
+// });
 
 
 $scope.size = ""; 
@@ -15,12 +28,11 @@ $scope.size = "";
         for (var i = 0; i < $scope.companies.length; i++) {
             if ($scope.companyElectricity == $scope.companies[i].name) {
                $scope.size =  ($scope.customerBill/$scope.companies[i].rate)/140;
-               $scope.mySize = $scope.mySize;
+     
             }
         }
 
     }
-
 
 
 
