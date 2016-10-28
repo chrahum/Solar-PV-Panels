@@ -7,108 +7,172 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
 	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
 		crossorigin="anonymous">
 
 	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+	integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
 		crossorigin="anonymous">
 
 	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 		crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="../css/styles.css" />
 
 </head>
 
 <body ng-app="adminMyApp" ng-cloak>
 	<div ng-controller="adminBodyController">
 		<div class="container">
+			<div id="logo">
+				<img src="../images/solar-energy.png" alt="Logo" style="width: 100px">
+			</div>
 			<div class="row">
 				<div class="col-md-6">
-					<h2>Add Contractor</h2><br>
-					<fieldset>
-						<div class="input-group">
-							<label>Contractor Name</label>
-							<label>Company Name</label>
-							<input type="text" class="form-contol" placeholder="Name" ng-model="companyName" /><br><br>
-							<label>First Name</label>
-							<input type="text" class="form-contol" placeholder="Name" ng-model="firstName"><br><br>
-							<label>Last Name</label>
-							<input type="text" class="form-contol" placeholder="Name" ng-model="lastName"><br><br>
-							<label>Age</label>
-							<input type="number" class="form-contol" placeholder="Age" ng-model="contractorAge"><br><br>
-							<label>Address</label><br>
-							<input type="text" class="form-contol" placeholder="Street Address" ng-model="streetAddress">
-							<input type="text" class="form-contol" placeholder="City" ng-model="cityAddress"><br><br>
-							<input type="text" class="form-contol" placeholder="State" ng-model="stateAddress">
-							<input type="text" class="form-contol" placeholder="Zip Code" ng-model="zipCode"><br><br>
-							<label>Contact Info</label><br>
-							<input type="number" class="form-contol" placeholder="Phone Number" ng-model="phoneNumber"><br><br>
-							<input type="email" class="form-contol" placeholder="Email" ng-model="emailInfo"><br><br>
-							<label>Average Price</label><br>
-							<input type="number" class="form-contol" placeholder="Price Per Watt Under 10kw" ng-model="pricePerWatt"><br><br>
+					<h2>Add Contractor</h2>
 
-							<label>Rating</label>
-							<input type="number" class="form-contol" placeholder="1-5 Stars" ng-model="starRating"><br><br>
-							<label>Warranty</label>
-							<input type="number" class="form-contol" placeholder="Labor Warranty in Years" ng-model="laborWarranty">
-							<button type="button" class="btn btn-primary pull-right" ng-click="pushContractors()">Add</button>
-
-						</div>
+					<div class="input-group">
+						<fieldset>
+							<p>
+								<label>Company Name</label>
+								<input type="text" class="form-control" placeholder="Company Name" ng-model="companyName" />
+							</p>
+							<p>
+								<label>First Name</label>
+								<input type="text" class="form-control" placeholder="First Name" ng-model="firstName">
+							</p>
+							<p>
+								<label>Last Name</label>
+								<input type="text" class="form-control" placeholder="Last Name" ng-model="lastName">
+							</p>
+							<p>
+								<label>Age</label>
+								<input type="number" class="form-control" placeholder="Age" ng-model="contractorAge">
+							</p>
+							<p>
+								<label>Address</label>
+								<input type="text" class="form-control" placeholder="Street Address" ng-model="streetAddress">
+								<input type="text" class="form-control" placeholder="City" ng-model="cityAddress">
+								<input type="text" class="form-control" placeholder="State" ng-model="stateAddress">
+								<input type="text" class="form-control" placeholder="Zip Code" ng-model="zipCode">
+							</p>
+							<p>
+								<label>Contact Info</label>
+							</p>
+							<p>
+								<input type="text" class="form-control" ng-model="phoneNumber" placeholder="Phone Number">
+								<input type="email" class="form-control" placeholder="Email" ng-model="emailInfo">
+							</p>
+							<p>
+								<label>Average Price</label>
+								<input type="number" class="form-control" placeholder="Price Per Watt Under 10kw" ng-model="pricePerWatt">
+							</p>
+							<p>
+								<label>Rating</label>
+								<input type="number" class="form-control" placeholder="1-5 Stars" ng-model="starRating" min="1" max="5">
+							</p>
+							<p>
+								<label>Warranty</label>
+								<input type="number" class="form-control" placeholder="Labor Warranty in Years" ng-model="laborWarranty">
+							</p>
+							<p>
+								<button type="button" class="btn btn-primary pull-right" ng-click="pushContractors()">Add</button>
+							</p>
+						</fieldset>
+					</div>
 
 
 				</div>
+
 				<div class="col-md-6">
 
 					<h2>Add Equipment</h2>
+
 					<fieldset>
+
 						<div class="input-group">
 
-
 							<h3>Panels</h3>
-							<label>Panel Name</label>
-							<input type="text" class="form-contol" placeholder="Brand" ng-model="panelBrand"><br><br>
-							<label>Panel Model</label>
-							<input type="text" class="form-contol" placeholder="Model" ng-model="panelModel"><br><br>
-							<label>Warranty</label>
-							<input type="number" class="form-contol" placeholder="Warranty" ng-model="panelWarranty"><br><br>
-							<label>Rating</label>
-							<input type="number" class="form-contol" placeholder="Rating" ng-model="panelRating"><br><br>
-							<label>Price</label>
-							<input type="number" class="form-contol" placeholder="Price" ng-model="panelPrice"><br><br>
-							<button type="button" class="btn btn-primary pull-right" ng-click="pushPanels()">Add</button>
+							<div>
+								<p>
+									<label>Panel Name</label>
+									<input type="text" class="form-control" placeholder="Brand" ng-model="panelBrand">
+								</p>
+								<p>
+									<label>Panel Model</label>
+									<input type="text" class="form-control" placeholder="Model" ng-model="panelModel">
+								</p>
+								<p>
+									<label>Warranty</label>
+									<input type="number" class="form-control" placeholder="Warranty" ng-model="panelWarranty">
+								</p>
+								<p>
+									<label>Rating</label>
+									<input type="number" class="form-control" placeholder="Rating" ng-model="panelRating">
+								</p>
+								<p>
+									<label>Price</label>
+									<input type="number" class="form-control" placeholder="Price" ng-model="panelPrice">
+								</p>
+								<p>
+									<button type="button" class="btn btn-primary pull-right" ng-click="pushPanels()">Add</button>
+								</p>
+							</div>
 
+							<div>
 
-							<p>
 								<h3> Add Mounting Brackets</h3>
-								<label>Bracket Name</label>
-								<input type="text" class="form-contol" placeholder="Bracket Name" ng-model="bracketName"><br><br>
-								<label>Warranty</label>
-								<input type="text" class="form-contol" placeholder="Warranty" ng-model="bracketWarranty"><br><br>
-								<label>Rating</label>
-								<input type="text" class="form-contol" placeholder="Rating" ng-model="bracketRating"><br><br>
-								<label>Price</label>
-								<input type="text" class="form-contol" placeholder="Price" ng-model="bracketPrice"><br><br>
+								<p>
+									<label>Bracket Name</label>
+									<input type="text" class="form-control" placeholder="Bracket Name" ng-model="bracketName">
+								</p>
+								<p>
+									<label>Warranty</label>
+									<input type="text" class="form-control" placeholder="Warranty" ng-model="bracketWarranty">
+								</p>
+								<p>
+									<label>Rating</label>
+									<input type="text" class="form-control" placeholder="Rating" ng-model="bracketRating">
+								</p>
+								<p>
+									<label>Price</label>
+									<input type="text" class="form-control" placeholder="Price" ng-model="bracketPrice">
+								</p>
+								<p>
+									<button type="button" class="btn btn-primary pull-right" ng-click="pushMountingBracket()">Add</button>
+								</p>
 
-								<button type="button" class="btn btn-primary pull-right" ng-click="pushMountingBracket()">Add</button>
+							</div>
 
-							</p>
-
+							<div>
+							<h3>Inverters</h3>
 							<p>
-
-								<h3>Inverters</h3>
 								<label>Inverter Brand</label>
-								<input type="text" class="form-contol" placeholder="Inverter Name" ng-model="inverterName"><br><br>
+								<input type="text" class="form-control" placeholder="Inverter Name" ng-model="inverterName">
+							</p>
+							<p>
 								<label>Inverter Model</label>
-								<input type="text" class="form-contol" placeholder="Inverter Model" ng-model="inverterModel"><br><br>
+								<input type="text" class="form-control" placeholder="Inverter Model" ng-model="inverterModel">
+							</p>
+							<p>
 								<label>Watts</label>
-								<input type="text" class="form-contol" placeholder="Watts" ng-model="inverterWatts"><br><br>
+								<input type="text" class="form-control" placeholder="Watts" ng-model="inverterWatts">
+							</p>
+							<p>
 								<label>Price</label>
-								<input type="text" class="form-contol" placeholder="Price" ng-model="inverterPrice"><br><br>
+								<input type="text" class="form-control" placeholder="Price" ng-model="inverterPrice">
+							</p>
+							<p>
 								<label>Warranty</label>
-								<input type="text" class="form-contol" placeholder="Warranty" ng-model="inverterWarranty"><br><br>
+								<input type="text" class="form-control" placeholder="Warranty" ng-model="inverterWarranty">
+							</p>
+							<p>
 								<button type="button" class="btn btn-primary pull-right" ng-click="pushInverters()">Add</button>
 							</p>
+							</div>
 						</div>
 					</fieldset>
 				</div>
@@ -119,9 +183,6 @@
 	<script src="./adminMyApp.js "></script>
 
 	<script src="./adminBodyController.js "></script>
-
-
-
 
 </body>
 
