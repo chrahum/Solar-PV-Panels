@@ -36,3 +36,7 @@ h2 {
 /*h3 {
     text-align: center;
 }*/
+
+#divBack {
+    background-color:rgba(255, 255,255, 0.8);
+}
