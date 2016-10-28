@@ -33,6 +33,22 @@ $scope.moveToEquipment = function(){
         $scope.equipmentHide = 1;
 }
 
+$scope.backContractor = function(){
+        $scope.engineerHide = null;
+        $scope.contractorHide = 1;
+        
+}
+
+ $scope.backEquip= function(){
+        $scope.engineerHide = null;
+        $scope.equipmentHide = 1;
+ }
+
+        $scope.backQuestions = function() {
+            $scope.engineerHide = null;
+            $scope.questionaireHide = 1;
+        }
+
 
     //caling the json:
     $http.get("http://localhost:8080/json/equipment.json")
@@ -115,6 +131,8 @@ $scope.moveToEquipment = function(){
         $scope.contractorHide = null;
         $scope.engineerHide = 1;
     }
+
+
 
 
     // $scope.numberPanels="";

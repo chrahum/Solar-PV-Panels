@@ -272,10 +272,17 @@
 				<p>Your total price after the tax credit will be ${{ totalWithTaxCredit }}</p>
 				<p>Your system will pay off in {{ paybackInYears }} years and {{ remainderInYears }} months. {{ paybackInMonths }}
 				</p>
-			</div>
+				<div>
+						<button type="button" class="btn btn-primary pull-right" ng-click="backContractor()">Change Contractor</button>
+						<button type="button" class="btn btn-primary pull-right" ng-click="backEquip()">Change Equipment</button>
+						<button type="button" class="btn btn-primary pull-right" ng-click="backQuestions()">Start Over</button>
+				</div>
+						
 
+			</div><!--End of container engineer-->
+						
 		</div>
-		<!--End of container engineer-->
+		
 	</div>
 	<script src="./module/myApp.js "></script>
 	<script src="./controller/myController.js "></script>
