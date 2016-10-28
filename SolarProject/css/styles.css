@@ -8,8 +8,18 @@
 
 }
 
-div {
-   align-content: center;
+.center {
+    margin: auto;
+    width: 100%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-left: 0;
+    padding-bottom: 75px
+}
+
+.moveFieldset {
+    padding-bottom: 20px;
 }
 
 h1 {

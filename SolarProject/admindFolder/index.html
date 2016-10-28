@@ -28,10 +28,12 @@
 				<img src="../images/solar-energy.png" alt="Logo" style="width: 100px">
 			</div>
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-md-4">
 					<h2>Add Contractor</h2>
 
-					<div class="input-group">
+					<div class="input-group center moveFieldset">
+
+						<h3>Contractors</h3>
 						<fieldset>
 							<p>
 								<label>Company Name</label>
@@ -80,34 +82,18 @@
 							</p>
 						</fieldset>
 					</div>
-					<div>
-						<h3>Delete Added Info</h3>
-						<div>
-							<label>New Contractor: </label>
-						</div>
-						<div>
-							<label>New Panel: </label>
-						</div>
-						<div>
-							<label>New Bracket: </label>
-						</div>
-						<div>
-							<label>New Inverter: </label>
-						</div>
-					</div>
 
 				</div>
+				<h2>Add Equipment</h2>
+				<div class="col-md-4">
 
-				<div class="col-md-6">
 
-					<h2>Add Equipment</h2>
+					<div class="input-group">
+						<fieldset>
 
-					<fieldset>
+							<div class="center">
+								<h3>Panels</h3>
 
-						<div class="input-group">
-
-							<h3>Panels</h3>
-							<div>
 								<p>
 									<label>Panel Name</label>
 									<input type="text" class="form-control" placeholder="Brand" ng-model="panelBrand">
@@ -133,7 +119,7 @@
 								</p>
 							</div>
 
-							<div>
+							<div class="center">
 
 								<h3> Add Mounting Brackets</h3>
 								<p>
@@ -157,38 +143,43 @@
 								</p>
 
 							</div>
+						</fieldset>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="center moveFieldset">
+						<fieldset>
+							<h3>Inverters</h3>
+							<p>
+								<label>Inverter Brand</label>
+								<input type="text" class="form-control" placeholder="Inverter Name" ng-model="inverterName">
+							</p>
+							<p>
+								<label>Inverter Model</label>
+								<input type="text" class="form-control" placeholder="Inverter Model" ng-model="inverterModel">
+							</p>
+							<p>
+								<label>Watts</label>
+								<input type="text" class="form-control" placeholder="Watts" ng-model="inverterWatts">
+							</p>
+							<p>
+								<label>Price</label>
+								<input type="text" class="form-control" placeholder="Price" ng-model="inverterPrice">
+							</p>
+							<p>
+								<label>Warranty</label>
+								<input type="text" class="form-control" placeholder="Warranty" ng-model="inverterWarranty">
+							</p>
+							<p>
+								<button type="button" class="btn btn-primary pull-right" ng-click="pushInverters()">Add</button>
+							</p>
+						</fieldset>
+					</div>
 
-							<div>
-								<h3>Inverters</h3>
-								<p>
-									<label>Inverter Brand</label>
-									<input type="text" class="form-control" placeholder="Inverter Name" ng-model="inverterName">
-								</p>
-								<p>
-									<label>Inverter Model</label>
-									<input type="text" class="form-control" placeholder="Inverter Model" ng-model="inverterModel">
-								</p>
-								<p>
-									<label>Watts</label>
-									<input type="text" class="form-control" placeholder="Watts" ng-model="inverterWatts">
-								</p>
-								<p>
-									<label>Price</label>
-									<input type="text" class="form-control" placeholder="Price" ng-model="inverterPrice">
-								</p>
-								<p>
-									<label>Warranty</label>
-									<input type="text" class="form-control" placeholder="Warranty" ng-model="inverterWarranty">
-								</p>
-								<p>
-									<button type="button" class="btn btn-primary pull-right" ng-click="pushInverters()">Add</button>
-								</p>
-							</div>
-						</div>
-					</fieldset>
 				</div>
 			</div>
 		</div>
+	</div>
 
 	</div>
 	<script src="./adminMyApp.js "></script>
